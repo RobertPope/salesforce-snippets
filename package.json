@@ -6,8 +6,9 @@
     "type": "git",
     "url": "https://github.com/RobertPope/rp-sf-snippets.git"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "RPCS",
+  "icon": "icon.png",
   "engines": {
     "vscode": "^1.50.0"
   },

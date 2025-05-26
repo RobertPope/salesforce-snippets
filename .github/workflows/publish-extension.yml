@@ -40,6 +40,7 @@ jobs:
         VERSION=$(node -p "require('./package.json').version")
         echo "📦 Bumped version to $VERSION"
 
+
     - name: Publish to VS Code Marketplace
       env:
         VSCE_PAT: ${{ secrets.VSCE_PAT }}

@@ -1,6 +1,6 @@
 {
   "Apex Call with then/catch": {
-    "prefix": "zz-apexcall",
+    "prefix": "lwc-apexcall",
     "body": [
       "import $1 from '@salesforce/apex/${2:MyApexClass}.$1';",
       "",

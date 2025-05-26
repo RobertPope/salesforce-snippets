@@ -1,1 +1,8 @@
-TODO: Flush out Readme file, determine scope
+## Robert Pope's personal code snippets for LWC development with some apex support
+
+## Manual Installation
+
+1. Download the latest `.vsix` from [Releases](https://github.com/RobertPope/rp-sf-snippets/releases)
+2. Run:
+
+   code --install-extension rpcs-salesforce-snippets-0.0.1.vsix

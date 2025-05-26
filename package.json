@@ -1,0 +1,21 @@
+{
+  "name": "rpcs-salesforce-snippets",
+  "displayName": "Snippets for Salesforce LWC & Apex Developers",
+  "description": "High-utility Lightning Web Components & Apex snippets",
+  "version": "0.0.1",
+  "publisher": "RPCS",
+  "engines": {
+    "vscode": "^1.50.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/javascript.json"
+      }
+    ]
+  }
+}

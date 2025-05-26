@@ -39,6 +39,7 @@ jobs:
         npm version ${{ steps.version.outputs.bump }} --no-git-tag-version
         echo "Bumped version to $(node -p \"require('./package.json').version\")"
 
+
     - name: Publish to VS Code Marketplace
       env:
         VSCE_PAT: ${{ secrets.VSCE_PAT }}

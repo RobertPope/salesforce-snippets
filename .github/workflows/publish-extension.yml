@@ -37,7 +37,8 @@ jobs:
     - name: Bump version in package.json
       run: |
         npm version ${{ steps.version.outputs.bump }} --no-git-tag-version
-        echo "\ud83d\udce6 Bumped version to $(node -p \"require('./package.json').version\")"
+        echo "Bumped version to $(node -p \"require('./package.json').version\")"
+
 
     - name: Publish to VS Code Marketplace
       env:

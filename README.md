@@ -5,4 +5,7 @@
 1. Download the latest `.vsix` from [Releases](https://github.com/RobertPope/rp-sf-snippets/releases)
 2. Run:
 
-   code --install-extension rpcs-salesforce-snippets-0.0.1.vsix
+   code --install-extension rpcs-salesforce-snippets-x.x.x.vsix
+
+--------
+This extension is under development - please provide feedback if you'd like additional features.

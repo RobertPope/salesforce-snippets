@@ -1,0 +1,17 @@
+{
+  "Apex Call with then/catch": {
+    "prefix": "zz-apexcall",
+    "body": [
+      "import $1 from '@salesforce/apex/${2:MyApexClass}.$1';",
+      "",
+      "$1({ $3 })",
+      "  .then(result => {",
+      "    this.$4 = result;",
+      "  })",
+      "  .catch(error => {",
+      "    this.error = error;",
+      "  });"
+    ],
+    "description": "Imperative Apex call with .then/.catch"
+  }
+}

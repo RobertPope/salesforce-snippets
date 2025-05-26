@@ -8,6 +8,8 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
     - name: Checkout code
@@ -35,13 +37,40 @@ jobs:
         fi
 
     - name: Bump version in package.json
+      id: bump
       run: |
         npm version ${{ steps.version.outputs.bump }} --no-git-tag-version
         VERSION=$(node -p "require('./package.json').version")
+        echo "version=$VERSION" >> $GITHUB_OUTPUT
         echo "📦 Bumped version to $VERSION"
 
+
+    - name: Package extension
+      run: vsce package -o rpcs-salesforce-snippets-${{ steps.bump.outputs.version }}.vsix
 
     - name: Publish to VS Code Marketplace
       env:
         VSCE_PAT: ${{ secrets.VSCE_PAT }}
-      run: vsce publish --pat $VSCE_PAT
+      run: vsce publish --packagePath rpcs-salesforce-snippets-${{ steps.bump.outputs.version }}.vsix --pat $VSCE_PAT
+
+    - name: Commit version bump and packaged extension
+      run: |
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git add package.json rpcs-salesforce-snippets-${{ steps.bump.outputs.version }}.vsix
+        git commit -m "chore: release v${{ steps.bump.outputs.version }}" || echo "No changes to commit"
+        git push
+
+    - name: Tag release
+      run: |
+        git tag v${{ steps.bump.outputs.version }}
+        git push origin v${{ steps.bump.outputs.version }}
+
+    - name: Create GitHub Release
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: v${{ steps.bump.outputs.version }}
+        name: v${{ steps.bump.outputs.version }}
+        files: rpcs-salesforce-snippets-${{ steps.bump.outputs.version }}.vsix
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -10,21 +10,20 @@
   "categories": [
     "Snippets"
   ],
-"contributes": {
-  "snippets": [
-    {
-      "language": "javascript",
-      "path": "./snippets/lwc-js.code-snippets"
-    },
-    {
-      "language": "html",
-      "path": "./snippets/lwc-html.code-snippets"
-    },
-    {
-      "language": "apex",
-      "path": "./snippets/apex.code-snippets"
-    }
-  ]
-}
-
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/lwc-js.code-snippets"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/lwc-html.code-snippets"
+      },
+      {
+        "language": "apex",
+        "path": "./snippets/apex.code-snippets"
+      }
+    ]
+  }
 }

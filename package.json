@@ -7,7 +7,7 @@
     "url": "https://github.com/RobertPope/rp-sf-snippets.git"
   },
   "version": "0.0.2",
-  "publisher": "RPCS",
+  "publisher": "rpcsllc",
   "icon": "icon.png",
   "engines": {
     "vscode": "^1.50.0"

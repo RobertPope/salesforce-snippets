@@ -2,7 +2,6 @@
   // File Header and Class Templates
   "Apex File Header": {
     "prefix": "apex-header",
-    "scope": "apex",
     "body": [
       "/*******************************************************************************
        * ${1:Project Name}: ${2:Module/Component Description}",
@@ -15,7 +14,6 @@
   },
   "Apex Class Skeleton": {
     "prefix": "apex-class-skeleton",
-    "scope": "apex",
     "body": [
       "public with sharing class ${1:ClassName} {",
       "    // ${2:Class description or purpose}",
@@ -35,7 +33,6 @@
   },
   "Apex Wrapper Class": {
     "prefix": "apex-class-wrapper",
-    "scope": "apex",
     "body": [
       "public class ${1:WrapperClass} {",
       "    // Define wrapper fields",
@@ -52,7 +49,6 @@
   },
   "Apex Queueable Class": {
     "prefix": "apex-class-queueable",
-    "scope": "apex",
     "body": [
       "public class ${1:MyQueueable} implements Queueable {",
       "    public void execute(QueueableContext context) {",
@@ -65,7 +61,6 @@
   },
   "Apex Batch Class": {
     "prefix": "apex-class-batch",
-    "scope": "apex",
     "body": [
       "public class ${1:MyBatchJob} implements Database.Batchable<SObject>, Database.Stateful {",
       "    public Database.QueryLocator start(Database.BatchableContext bc) {",
@@ -88,7 +83,6 @@
   },
   "Apex Schedulable Class": {
     "prefix": "apex-class-schedulable",
-    "scope": "apex",
     "body": [
       "public class ${1:MySchedulable} implements Schedulable {",
       "    public void execute(SchedulableContext sc) {",
@@ -104,7 +98,6 @@
   // Wireable Apex Methods (use @AuraEnabled(cacheable=true) for LWC @wire) :contentReference[oaicite:11]{index=11}:contentReference[oaicite:12]{index=12}
   "Get Accounts (Wire)": {
     "prefix": "apex-wire-getAccounts",
-    "scope": "apex",
     "body": [
       "@AuraEnabled(cacheable=true)",
       "public static List<Account> getAccounts() {",
@@ -116,7 +109,6 @@
   },
   "Get Contacts (Wire)": {
     "prefix": "apex-wire-getContacts",
-    "scope": "apex",
     "body": [
       "@AuraEnabled(cacheable=true)",
       "public static List<Contact> getContacts() {",
@@ -128,7 +120,6 @@
   },
   "Search Accounts (Wire with param)": {
     "prefix": "apex-wire-searchAccounts",
-    "scope": "apex",
     "body": [
       "@AuraEnabled(cacheable=true)",
       "public static List<Account> findAccounts(String searchKey) {",
@@ -141,7 +132,6 @@
   },
   "Get Record by Id (Wire)": {
     "prefix": "apex-wire-getRecordById",
-    "scope": "apex",
     "body": [
       "@AuraEnabled(cacheable=true)",
       "public static Account getAccountById(Id recordId) {",
@@ -153,7 +143,6 @@
   },
   "Get Related Contacts (Wire)": {
     "prefix": "apex-wire-getRelatedContacts",
-    "scope": "apex",
     "body": [
       "@AuraEnabled(cacheable=true)",
       "public static List<Contact> getContactsByAccount(Id accountId) {",
@@ -165,7 +154,6 @@
   },
   "Get Picklist Values (Wire)": {
     "prefix": "apex-wire-getPicklistValues",
-    "scope": "apex",
     "body": [
       "@AuraEnabled(cacheable=true)",
       "public static List<String> getStagePicklistValues() {",
@@ -182,7 +170,6 @@
   },
   "Get Current User (Wire)": {
     "prefix": "apex-wire-getCurrentUser",
-    "scope": "apex",
     "body": [
       "@AuraEnabled(cacheable=true)",
       "public static User getCurrentUser() {",
@@ -195,7 +182,6 @@
   },
   "Count Records (Wire)": {
     "prefix": "apex-wire-getRecordCount",
-    "scope": "apex",
     "body": [
       "@AuraEnabled(cacheable=true)",
       "public static Integer countContacts() {",
@@ -209,7 +195,6 @@
   // Imperative Apex Methods (invoked via Lightning UI or user events):contentReference[oaicite:13]{index=13}
   "Update Account (Imperative)": {
     "prefix": "apex-imperative-updateAccount",
-    "scope": "apex",
     "body": [
       "@AuraEnabled",
       "public static Boolean updateAccount(Account acc) {",
@@ -226,7 +211,6 @@
   },
   "Create Contact (Imperative)": {
     "prefix": "apex-imperative-createContact",
-    "scope": "apex",
     "body": [
       "@AuraEnabled",
       "public static Contact createContact(Contact newContact) {",
@@ -239,7 +223,6 @@
   },
   "Delete Records (Imperative)": {
     "prefix": "apex-imperative-deleteRecords",
-    "scope": "apex",
     "body": [
       "@AuraEnabled",
       "public static void deleteRecords(List<Id> recordIds) {",
@@ -252,7 +235,6 @@
   },
   "Upsert Accounts (Imperative)": {
     "prefix": "apex-imperative-upsertRecords",
-    "scope": "apex",
     "body": [
       "@AuraEnabled",
       "public static void upsertAccounts(List<Account> accounts) {",
@@ -264,7 +246,6 @@
   },
   "Share Record (Imperative)": {
     "prefix": "apex-imperative-shareRecord",
-    "scope": "apex",
     "body": [
       "@AuraEnabled",
       "public static void shareAccount(Id accountId, Id userOrGroupId, String accessLevel) {",
@@ -280,7 +261,6 @@
   },
   "Callout GET (Imperative)": {
     "prefix": "apex-imperative-calloutGet",
-    "scope": "apex",
     "body": [
       "@AuraEnabled",
       "public static String callExternalGet() {",
@@ -302,7 +282,6 @@
   },
   "Callout POST (Imperative)": {
     "prefix": "apex-imperative-calloutPost",
-    "scope": "apex",
     "body": [
       "@AuraEnabled",
       "public static String callExternalPost(String jsonPayload) {",
@@ -320,7 +299,6 @@
   },
   "Publish Platform Event": {
     "prefix": "apex-imperative-publishEvent",
-    "scope": "apex",
     "body": [
       "@AuraEnabled",
       "public static void publishUpdateEvent(String recordId) {",
@@ -339,7 +317,6 @@
   },
   "Enqueue Queueable (Imperative)": {
     "prefix": "apex-imperative-queueJob",
-    "scope": "apex",
     "body": [
       "@AuraEnabled",
       "public static void startJob() {",
@@ -351,7 +328,6 @@
   },
   "Execute Batch (Imperative)": {
     "prefix": "apex-imperative-runBatch",
-    "scope": "apex",
     "body": [
       "@AuraEnabled",
       "public static Id runBatchJob() {",
@@ -364,7 +340,6 @@
   },
   "Schedule Job (Imperative)": {
     "prefix": "apex-imperative-scheduleJob",
-    "scope": "apex",
     "body": [
       "@AuraEnabled",
       "public static String scheduleJob() {",
@@ -378,7 +353,6 @@
   },
   "Send Email (Imperative)": {
     "prefix": "apex-imperative-sendEmail",
-    "scope": "apex",
     "body": [
       "@AuraEnabled",
       "public static void sendEmailToContact(Id contactId) {",
@@ -396,7 +370,6 @@
   },
   "Perform Action (Imperative)": {
     "prefix": "apex-imperative-performAction",
-    "scope": "apex",
     "body": [
       "@AuraEnabled",
       "public static void performAction(Id recordId) {",
@@ -411,7 +384,6 @@
   },
   "Throw Custom Error (Imperative)": {
     "prefix": "apex-imperative-throwError",
-    "scope": "apex",
     "body": [
       "@AuraEnabled",
       "public static void throwCustomError() {",
@@ -425,7 +397,6 @@
   // Utility Apex Methods & Classes
   "Logger Utility": {
     "prefix": "apex-util-logger",
-    "scope": "apex",
     "body": [
       "public with sharing class Logger {",
       "    public static void log(String message) {",
@@ -437,7 +408,6 @@
   },
   "Parse JSON (Apex)": {
     "prefix": "apex-util-parseJson",
-    "scope": "apex",
     "body": [
       "public static Map<String, Object> parseJson(String jsonString) {",
       "    // Deserialize JSON string into a loosely-typed map",
@@ -448,7 +418,6 @@
   },
   "Serialize to JSON (Apex)": {
     "prefix": "apex-util-toJson",
-    "scope": "apex",
     "body": [
       "public static String toJson(Object obj) {",
       "    // Serialize an Apex object (or collection) to a JSON string",
@@ -459,7 +428,6 @@
   },
   "Format Date (Apex)": {
     "prefix": "apex-util-formatDate",
-    "scope": "apex",
     "body": [
       "public static String formatDate(DateTime dt) {",
       "    if (dt == null) return null;",
@@ -471,7 +439,6 @@
   },
   "Check CRUD Permissions": {
     "prefix": "apex-util-checkCrud",
-    "scope": "apex",
     "body": [
       "public static Boolean canCreateAccount() {",
       "    // Check object-level create permission on Account object",
@@ -482,7 +449,6 @@
   },
   "Try-Catch Wrapper": {
     "prefix": "apex-util-tryCatch",
-    "scope": "apex",
     "body": [
       "public static void executeSafely() {",
       "    try {",
@@ -499,7 +465,6 @@
   },
   "Custom Exception Class": {
     "prefix": "apex-util-customException",
-    "scope": "apex",
     "body": [
       "public class ${1:CustomException} extends Exception {",
       "    // Custom exception for specific error handling",
@@ -509,7 +474,6 @@
   },
   "Global Search (SOSL)": {
     "prefix": "apex-util-soslSearch",
-    "scope": "apex",
     "body": [
       "@AuraEnabled(cacheable=true)",
       "public static List<List<SObject>> globalSearch(String keyword) {",
@@ -522,7 +486,6 @@
   },
   "Get Custom Metadata": {
     "prefix": "apex-util-getCustomMetadata",
-    "scope": "apex",
     "body": [
       "@AuraEnabled(cacheable=true)",
       "public static List<Custom_Metadata_Type__mdt> getAllMetadata() {",
@@ -534,7 +497,6 @@
   },
   "Describe SObject": {
     "prefix": "apex-util-describeSObject",
-    "scope": "apex",
     "body": [
       "@AuraEnabled(cacheable=true)",
       "public static Map<String, Schema.SObjectField> describeObject(String objectApiName) {",
@@ -552,7 +514,6 @@
   // Apex Unit Test Snippets (for Apex test classes & methods) :contentReference[oaicite:14]{index=14}
   "Apex Test Class Template": {
     "prefix": "apex-test-class",
-    "scope": "apex",
     "body": [
       "@isTest",
       "private class ${1:MyClass_Test} {",
@@ -578,7 +539,6 @@
   },
   "Apex Test Method": {
     "prefix": "apex-test-method",
-    "scope": "apex",
     "body": [
       "@isTest",
       "static void ${1:TestMethodName}() {",
@@ -595,7 +555,6 @@
   },
   "Test Setup Method": {
     "prefix": "apex-test-setup",
-    "scope": "apex",
     "body": [
       "@TestSetup",
       "static void setupTestData() {",
@@ -607,7 +566,6 @@
   },
   "Test start/stop block": {
     "prefix": "apex-test-startStop",
-    "scope": "apex",
     "body": [
       "Test.startTest();",
       "${1:// ... code to test ...}",
@@ -617,7 +575,6 @@
   },
   "Test runAs User": {
     "prefix": "apex-test-runAs",
-    "scope": "apex",
     "body": [
       "User ${1:testUser} = new User(${2:/* set required User fields */});",
       "insert ${1:testUser};",
@@ -629,7 +586,6 @@
   },
   "HttpCalloutMock Class": {
     "prefix": "apex-test-calloutMock",
-    "scope": "apex",
     "body": [
       "private class ${1:MockHttpResponse} implements HttpCalloutMock {",
       "    public HTTPResponse respond(HTTPRequest req) {",
@@ -646,7 +602,6 @@
   },
   "Test Data Factory Method": {
     "prefix": "apex-test-dataFactory",
-    "scope": "apex",
     "body": [
       "private static ${1:Account} create${2:TestAccount}() {",
       "    Account acc = new Account(Name='${3:Test Account}');",
@@ -659,7 +614,6 @@
   },
   "System.assertEquals": {
     "prefix": "apex-test-assert",
-    "scope": "apex",
     "body": [
       "System.assertEquals(${1:expected}, ${2:actual}, '${3:Failure message (optional)}');"
     ],
@@ -667,7 +621,6 @@
   },
   "Test Exception Handling": {
     "prefix": "apex-test-exception",
-    "scope": "apex",
     "body": [
       "Boolean exceptionThrown = false;",
       "try {",
@@ -682,7 +635,6 @@
   },
   "Test Batch/Async Apex": {
     "prefix": "apex-test-batch",
-    "scope": "apex",
     "body": [
       "Test.startTest();",
       "Id batchJobId = Database.executeBatch(new ${1:MyBatchJob}(), ${2:200});",

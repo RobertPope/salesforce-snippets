@@ -4,7 +4,7 @@
   "description": "High-utility Lightning Web Components & Apex snippets",
   "repository": {
     "type": "git",
-    "url": "https://github.com/RobertPope/rp-sf-snippets.git"
+    "url": "https://github.com/RobertPope/salesforce-snippets"
   },
   "version": "0.0.4",
   "publisher": "rpcsllc",

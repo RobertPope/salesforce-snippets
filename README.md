@@ -2,7 +2,7 @@
 
 ## Manual Installation
 
-1. Download the latest `.vsix` from [Releases](https://github.com/RobertPope/rp-sf-snippets/releases)
+1. Download the latest `.vsix` from [Releases](https://github.com/RobertPope/salesforce-snippets/releases)
 2. Run:
 
    code --install-extension rpcs-salesforce-snippets-x.x.x.vsix
